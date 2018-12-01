@@ -31,7 +31,7 @@ public class Home_Page extends AppCompatActivity implements NavigationView.OnNav
 
 
 
-        adapter = new OrderAdapter(  );
+        adapter = new OrderAdapter( ordersRecyclerview );
         ordersRecyclerview = findViewById( R.id.orders );
         dl = (DrawerLayout)findViewById(R.id.activity_main);
         t = new ActionBarDrawerToggle(this, dl,R.string.Open, R.string.Close);

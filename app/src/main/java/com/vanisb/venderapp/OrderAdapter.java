@@ -1,23 +1,14 @@
 package com.vanisb.venderapp;
 
+import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.ArrayList;
-
-import de.hdodenhof.circleimageview.CircleImageView;
-
-import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
 /**
  * Created by vikas on 19/11/18.
@@ -25,18 +16,87 @@ import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 
 public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.Holder> {
 
-    private ArrayList<String> name;
+   /* private ArrayList<String> name;
     private ArrayList<String> address;
     //private int size;
     private ArrayList<Bitmap> img;
     private Context context;
     private String[] name1;
-    private String[] address1;
+    private String[] address1;*/
+   private String[] name;
+    TextView user_name;
+    Context context;
+   /* public OrderAdapter(Context context, String[] name) {
+        ;
+    }*/
+
+    public OrderAdapter(Context context, String[] user) {
+        this.name = name;
+        this.context = context;
+    }
+
+
+
+    @Override
+    public OrderAdapter.Holder onCreateViewHolder(ViewGroup parent, int viewType) {
+         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
+        View view = inflater.inflate(R.layout.recycle_order, parent, false);
+        return new OrderAdapter.Holder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(final OrderAdapter.Holder holder, int position) {
+        holder.name.setText(name[position]);
+        int no = name.length;
+        user_name.setText(no+"");
+
+        holder.accept.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context, "Order Accepter", Toast.LENGTH_SHORT).show();
+             //   holder.accept.setClickable(false);
+               // holder.accept.setBackground(context.getResources().getDrawable(R.drawable.round_button_green_accepted));
+                //holder.decline.setBackground(context.getResources().getDrawable(R.drawable.round_button_red_declined));
+                //holder.decline.setClickable(false);
+            }
+        });
+
+        holder.decline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context, "Order Accepter", Toast.LENGTH_SHORT).show();
+                //   holder.accept.setClickable(false);
+                // holder.accept.setBackground(context.getResources().getDrawable(R.drawable.round_button_green_accepted));
+                //holder.decline.setBackground(context.getResources().getDrawable(R.drawable.round_button_red_declined));
+                //holder.decline.setClickable(false);
+            }
+        });
+
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return 0;
+    }
+
+    public class Holder extends RecyclerView.ViewHolder {
+        TextView name;
+        Button accept, decline;
+
+        public Holder(View itemView) {
+            super( itemView );
+            name = itemView.findViewById(R.id.name);
+            accept = itemView.findViewById(R.id.Accepted_order);
+            decline = itemView.findViewById(R.id.Canceled_order);
+
+        }
+    }
 
 
 
 
-    public OrderAdapter(ArrayList<String> user_name,ArrayList<String> address, ArrayList<Bitmap> img, int size) {
+    /*public OrderAdapter(ArrayList<String> user_name,ArrayList<String> address, ArrayList<Bitmap> img, int size) {
         this.name = user_name;
         this.address=address;
       //  this.size = size;
@@ -44,6 +104,11 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.Holder> {
     }
 
     public OrderAdapter() {
+    }
+
+    public OrderAdapter(Context context, String[] message) {
+        this.name1 = message;
+        this.context = context;
     }
 
     @Override
@@ -55,15 +120,15 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.Holder> {
 
     @Override
     public void onBindViewHolder(final Holder holder, int position) {
-       // String name1 = name.get(position);
+      // String name1 = name.get(position);
         //String address1 = address.get(position);
        // Bitmap image = img.get(position);
-       // holder.name.setText(name1[position]);
+      // holder.name.setText(name1[position]);
         //holder.address.setText(address1[position]);
         //holder.user_image.setImageBitmap(image);
        // int no1 = name1.length;
         //int no = address1.length;
-       /* holder.yes.setOnClickListener(new View.OnClickListener() {
+       *//* holder.yes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, "Order Accepter", Toast.LENGTH_SHORT).show();
@@ -72,9 +137,14 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.Holder> {
               //  holder.no.setBackground(context.getResources().getDrawable(R.drawable.round_button_red_declined));
                 //holder.no.setClickable(false);
             }
-        });*/
+        });
+*//*
+        holder.yes.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-
+            }
+        } );
     }
 
     @Override
@@ -119,7 +189,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.Holder> {
             user_image = itemView.findViewById(R.id.user_picture);
             yes=itemView.findViewById( R.id.Accepted_order );
             no=itemView.findViewById( R.id.Canceled_order );
-           /* yes.setOnClickListener( new View.OnClickListener() {
+           *//* yes.setOnClickListener( new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
@@ -138,11 +208,13 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.Holder> {
                 }
             } );
 
-*/
+*//*
         }
     }
 
 
 
 
+}
+*/
 }
