@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.TextView;
 
 /**
@@ -20,12 +21,22 @@ public class Home_freg extends Fragment {
     Context context;
     TextView no;
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate( R.layout.home_freg, container, false );
 
+        ordersRecyclerview = v.findViewById(R.id.orders);
+        ordersRecyclerview.setLayoutManager(new LinearLayoutManager(context));
+        String[] message = new String[4];
+        message[0] = "message1";
+        message[1] = "message2";
+        message[2] = "message3";
+        message[3] = "message4";
+        ordersRecyclerview.setAdapter(new OrderAdapter(getActivity(), message, no));
 
-        ordersRecyclerview = v.findViewById( R.id.orders );
+        /*ordersRecyclerview = v.findViewById( R.id.orders );
 
         ordersRecyclerview.setLayoutManager( new LinearLayoutManager( context ) );
         String[] user=new String[4];
@@ -34,9 +45,7 @@ public class Home_freg extends Fragment {
         user[3]="user1";
 
         ordersRecyclerview.setAdapter( new OrderAdapter( getActivity(),user) );
-
-        //ordersRecyclerview.setAdapter( adapter );
-
+        ordersRecyclerview.setAdapter( (RecyclerView.Adapter) OrderAdapter );*/
         return v;
 
     }

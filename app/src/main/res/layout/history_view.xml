@@ -3,7 +3,6 @@
     android:id="@+id/sale_list_view"
     android:layout_height="175dp"
     android:layout_width="match_parent"
-    android:layout_margin="5dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="#fff">
 
@@ -48,46 +47,6 @@
             android:textSize="15sp"
             android:textStyle="bold" />
 
-
-        <Button
-            android:id="@+id/Decline"
-            android:layout_width="80dp"
-            android:layout_height="50dp"
-            android:layout_alignEnd="@+id/view"
-            android:layout_alignBottom="@+id/Accepted_order"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="28dp"
-            android:layout_marginBottom="28dp"
-            android:background="@color/RED"
-            android:text="No"
-            android:textColor="@android:color/black" />
-
-        <Button
-            android:id="@+id/Accepted_order"
-            android:layout_width="80dp"
-            android:layout_height="50dp"
-            android:layout_alignTop="@+id/user_name"
-            android:layout_marginTop="-17dp"
-            android:layout_marginEnd="-78dp"
-            android:layout_toStartOf="@+id/Decline"
-            android:background="@color/Green"
-            android:onClick="accept"
-            android:text="Yes"
-            android:textColor="@android:color/black" />
-
-
-        <Button
-            android:id="@+id/complete_order"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_alignTop="@+id/user_name"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="-108dp"
-            android:layout_toStartOf="@+id/Decline"
-            android:background="@color/Green"
-            android:text="@string/Completed_order"
-            android:visibility="gone"
-            android:textColor="@android:color/black" />
 
         <View
             android:id="@+id/view"

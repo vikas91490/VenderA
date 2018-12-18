@@ -13,9 +13,12 @@ import android.view.ViewGroup;
 
 
 public class History_freg extends Fragment {
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate( R.layout.history_frag, container, false );
+
 
         return v;
     }

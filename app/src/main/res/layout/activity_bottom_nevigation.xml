@@ -1,82 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frame_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_above="@id/viw"
-    android:orientation="vertical"
-    tools:context=".Home_Page">
+    android:layout_height="match_parent">
 
-    <RelativeLayout
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        tools:context=".Home_Page"/>
 
-        android:layout_marginBottom="5dp"
-
-        >
-
-        <View
-            android:id="@+id/viw"
-            android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:layout_alignTop="@id/lin1"
-            android:layout_marginBottom="5dp"
-            android:background="#c0c0c0" />
-
-
-        <LinearLayout
-            android:id="@+id/lin1"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_gravity="bottom"
-            android:background="#00b5e5ef"
-            android:padding="7dp"
+            android:layout_marginBottom="5dp">
 
-            >
+            <View
+                android:id="@+id/viw"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignTop="@id/lin1"
+                android:layout_marginBottom="5dp"
+                android:background="#c0c0c0" />
 
-            <ImageButton
-                android:id="@+id/home_btn"
-                android:layout_width="fill_parent"
+
+            <LinearLayout
+                android:id="@+id/lin1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@null"
-                android:onClick="selectFrag"
-                android:src="@drawable/ic_home" />
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:background="#00b5e5ef"
+                android:padding="7dp"
 
-            <ImageButton
-                android:id="@+id/Accepted_order"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@null"
-                android:onClick="selectFrag"
-                android:src="@drawable/ic_history" />
+                >
 
-            <ImageButton
-                android:id="@+id/Canceled_order"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@null"
-                android:onClick="selectFrag"
-                android:src="@drawable/ic_accept_order" />
+                <ImageButton
+                    android:id="@+id/home_btn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:onClick="selectFrag"
+                    android:src="@drawable/ic_home" />
 
-            <ImageButton
-                android:id="@+id/History"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@null"
-                android:onClick="selectFrag"
-                android:src="@drawable/ic_complete_order" />
+                <ImageButton
+                    android:id="@+id/Accepted_order"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:onClick="selectFrag"
+                    android:src="@drawable/ic_history" />
+
+                <ImageButton
+                    android:id="@+id/Canceled_order"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:onClick="selectFrag"
+                    android:src="@drawable/ic_accept_order" />
+
+                <ImageButton
+                    android:id="@+id/History"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:onClick="selectFrag"
+                    android:src="@drawable/ic_complete_order" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
 
 
 
 
-        </LinearLayout>
-    </RelativeLayout>
-
-
-</FrameLayout>
+</RelativeLayout>

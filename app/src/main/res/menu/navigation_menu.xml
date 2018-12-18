@@ -1,42 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/My_Order_list"
+    <item
+        android:id="@+id/My_Order_list"
         android:icon="@drawable/ic_launcher_background"
-        android:title="My Order list"/>
-    <item android:id="@+id/Accepted_order"
+        android:title="My Order list" />
+    <item
+        android:id="@+id/Accepted_order"
         android:icon="@drawable/ic_launcher_background"
-        android:title="Accepted order"/>
-    <item android:id="@+id/Succeed_order"
+        android:title="Accepted order" />
+    <item
+        android:id="@+id/Succeed_order"
         android:icon="@drawable/ic_launcher_background"
-        android:title="Succeed order"/>
-    <item android:id="@+id/Canceled_order"
+        android:title="Succeed order" />
+    <item
+        android:id="@+id/Canceled_order"
         android:icon="@drawable/ic_launcher_background"
-        android:title="Canceled order "/>
-    <item android:id="@+id/Pending_payments"
+        android:title="Canceled order " />
+    <item
+        android:id="@+id/Pending_payments"
         android:icon="@drawable/ic_launcher_background"
-        android:title="Pending payments "/>
-    <item android:id="@+id/Payment_detail"
-          android:icon="@drawable/ic_launcher_background"
-          android:title="Payment detail"/>
-    <item android:id="@+id/Stock_management"
-           android:icon="@drawable/ic_launcher_background"
-           android:title="Stock management"/>
-    <item android:id="@+id/Download_bills"
+        android:title="Pending payments " />
+    <item
+        android:id="@+id/Payment_detail"
         android:icon="@drawable/ic_launcher_background"
-        android:title="Download bills"/>
-    <item android:id="@+id/Event_booking"
+        android:title="Payment detail" />
+    <item
+        android:id="@+id/Stock_management"
         android:icon="@drawable/ic_launcher_background"
-        android:title="Event booking"/>
-    <item android:id="@+id/Request_order"
+        android:title="Stock management" />
+    <item
+        android:id="@+id/Download_bills"
         android:icon="@drawable/ic_launcher_background"
-        android:title="Request order"/>
-    <item android:id="@+id/Invite_vendor"
+        android:title="Download bills" />
+    <item
+        android:id="@+id/Event_booking"
         android:icon="@drawable/ic_launcher_background"
-        android:title="Invite vendor "/>
-
-
-
+        android:title="Event booking" />
+    <item
+        android:id="@+id/Request_order"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="Request order" />
+    <item
+        android:id="@+id/Invite_vendor"
+        android:icon="@drawable/ic_launcher_background"
+        android:title="Invite vendor " />
 
 
 </menu>

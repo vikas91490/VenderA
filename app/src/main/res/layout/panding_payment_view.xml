@@ -50,54 +50,31 @@
 
 
         <Button
-            android:id="@+id/Decline"
-            android:layout_width="80dp"
-            android:layout_height="50dp"
-            android:layout_alignEnd="@+id/view"
-            android:layout_alignBottom="@+id/Accepted_order"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="28dp"
-            android:layout_marginBottom="28dp"
-            android:background="@color/RED"
-            android:text="No"
-            android:textColor="@android:color/black" />
-
-        <Button
             android:id="@+id/Accepted_order"
             android:layout_width="80dp"
             android:layout_height="50dp"
-            android:layout_alignTop="@+id/user_name"
-            android:layout_marginTop="-17dp"
-            android:layout_marginEnd="-78dp"
-            android:layout_toStartOf="@+id/Decline"
+            android:layout_marginLeft="186dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="10dp"
             android:background="@color/Green"
+           android:layout_centerInParent="true"
+            android:layout_alignParentEnd="true"
             android:onClick="accept"
-            android:text="Yes"
+            android:text="panding"
             android:textColor="@android:color/black" />
 
 
-        <Button
-            android:id="@+id/complete_order"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_alignTop="@+id/user_name"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="-108dp"
-            android:layout_toStartOf="@+id/Decline"
-            android:background="@color/Green"
-            android:text="@string/Completed_order"
-            android:visibility="gone"
-            android:textColor="@android:color/black" />
+
 
         <View
             android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="0.1dp"
-            android:layout_below="@id/Accepted_order"
+           android:layout_alignParentBottom="true"
             android:layout_marginStart="10dp"
             android:layout_marginTop="90dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="10dp"
             android:background="#c0c0c0" />
 
     </RelativeLayout>

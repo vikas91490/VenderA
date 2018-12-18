@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Vender App</string>
-    <string name="Open">Storage</string>
-    <string name="Close">Storage</string>
+    <string name="Open">Vender</string>
+    <string name="Close">Vender</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="title_home">Home</string>
     <string name="Accepted_order">Accepted_order</string>
