@@ -67,7 +67,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.Holder> {
                 holder.decline.setVisibility( View.GONE );
                 holder.complete.setVisibility( View.VISIBLE );
                 holder.decline.setClickable(false);
-                send_data();
+              //  send_data();
             }
         });
 
@@ -80,7 +80,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.Holder> {
                 holder.decline.setVisibility( View.GONE );
                 holder.accept.setClickable(false);
 
-                send_data();
+               // send_data();
             }
         });
     }
@@ -111,6 +111,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.Holder> {
 
 
 
+/*
     private void send_data() {
 
         username_string = username.getText().toString();
@@ -127,6 +128,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.Holder> {
         } else
             Toast.makeText(context, "not Success", Toast.LENGTH_SHORT).show();
     }
+*/
 
 
 }

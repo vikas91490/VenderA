@@ -14,15 +14,20 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".MainActivity" />
-        <activity android:name=".Register">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".Register"></activity>
+        <activity android:name=".Pending_Payments" />
+        <activity
+            android:name=".Home_Page"
+            android:label="@string/title_activity_nav"
+            android:theme="@style/AppTheme">
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN">
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                </action>
+                <category android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
+
         </activity>
-        <activity android:name=".Home_Page" />
-        <activity android:name=".Pending_Payments"></activity>
     </application>
 
 </manifest>

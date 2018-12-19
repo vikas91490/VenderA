@@ -49,7 +49,7 @@
                     android:src="@drawable/ic_home" />
 
                 <ImageButton
-                    android:id="@+id/Accepted_order"
+                    android:id="@+id/acepted_order"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
