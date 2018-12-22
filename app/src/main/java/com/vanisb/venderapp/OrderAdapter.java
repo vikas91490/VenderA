@@ -35,7 +35,8 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.Holder> {
         this.context = context;
     }
 
-    public OrderAdapter(Cancel_Order_freg cancel_order_freg, ArrayList<GetSet> data, int size) {
+
+    public OrderAdapter(Complete_Order_freg cancel_order_freg, ArrayList<GetSet> data, int size) {
     }
 
     @NonNull
@@ -83,7 +84,42 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.Holder> {
                // send_data();
             }
         });
+        
+        holder.complete.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "Order Complete", Toast.LENGTH_SHORT).show();
+                holder.complete.setClickable(false);
+                holder.complete.setVisibility( View.GONE );
+                holder.accept.setClickable(false);
+                holder.paymentpanding.setVisibility(View.VISIBLE );
+                holder.paymentdone.setVisibility( View.VISIBLE );
+                //send_data_volley();
+               // send_data();
+            }
+        } );
+
+        holder.paymentdone.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "Payment done", Toast.LENGTH_SHORT).show();
+
+            }
+        } );
+
+
+        holder.paymentpanding.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(context, " payment panding", Toast.LENGTH_SHORT).show();
+            }
+        } );
     }
+
+   /* private void send_data_volley() {
+    }*/
+
 
 
 
@@ -95,7 +131,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.Holder> {
     public class Holder extends RecyclerView.ViewHolder {
         TextView name;
         RelativeLayout notification_layout;
-        Button accept, decline,complete;
+        Button accept, decline,complete,paymentdone,paymentpanding;
 
         public Holder(View itemView) {
             super(itemView);
@@ -104,6 +140,10 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.Holder> {
             accept = itemView.findViewById(R.id.Accepted_order);
             decline = itemView.findViewById(R.id.Decline);
             complete = itemView.findViewById(R.id.complete_order);
+            paymentdone=itemView.findViewById( R.id.payment_done );
+            paymentpanding=itemView.findViewById( R.id.payment_panding );
+
+
 
         }
     }

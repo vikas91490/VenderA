@@ -30,10 +30,10 @@ public class Home_freg extends Fragment {
         ordersRecyclerview = v.findViewById(R.id.orders);
         ordersRecyclerview.setLayoutManager(new LinearLayoutManager(context));
         String[] message = new String[4];
-        message[0] = "message1";
-        message[1] = "message2";
-        message[2] = "message3";
-        message[3] = "message4";
+        message[0] = "user1";
+        message[1] = "user2";
+        message[2] = "user3";
+        message[3] = "user4";
         ordersRecyclerview.setAdapter(new OrderAdapter(getActivity(), message, no));
 
         /*ordersRecyclerview = v.findViewById( R.id.orders );
