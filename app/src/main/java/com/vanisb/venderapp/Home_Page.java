@@ -3,6 +3,7 @@ package com.vanisb.venderapp;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -137,6 +138,48 @@ public class Home_Page extends AppCompatActivity
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+        int id = item.getItemId();
+
+        if (id == R.id.My_Order_list) {
+
+            // Handle the camera action
+        } else if (id == R.id.Accepted_order) {
+
+
+
+        } else if (id == R.id.Succeed_order) {
+
+
+        } else if (id == R.id.Canceled_order) {
+
+
+        } else if (id == R.id.Pending_payments) {
+            Intent intent=new Intent( this,Pending_Payments.class );
+            startActivity( intent );
+
+        } else if (id == R.id.Payment_detail) {
+
+        }
+        else if (id == R.id.Stock_management) {
+
+        }
+        else if (id == R.id.Download_bills) {
+            Intent intent= new Intent( this,Bill_download_adapter.class );
+            startActivity( intent );
+
+        }
+        else if (id == R.id.Event_booking) {
+
+        }
+        else if (id == R.id.Request_order) {
+
+        }
+        else if (id == R.id.Invite_vendor) {
+
+        }
+        DrawerLayout drawer =  findViewById( R.id.drawer_layout );
+        drawer.closeDrawer( GravityCompat.START );
         return false;
     }
 }

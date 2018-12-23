@@ -1,15 +1,12 @@
 package com.vanisb.venderapp;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -56,7 +53,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.Holder> {
 
         final int previous = position;
 
-        //.setText(no+"");
+
 
 
         holder.accept.setOnClickListener(new View.OnClickListener() {
@@ -103,7 +100,10 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.Holder> {
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, "Payment done", Toast.LENGTH_SHORT).show();
-
+                holder.complete.setClickable(false);
+                holder.paymentdone.setVisibility( View.GONE );
+                holder.paymentdone.setClickable(false);
+                holder.paymentpanding.setClickable(false);
             }
         } );
 
@@ -111,13 +111,19 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.Holder> {
         holder.paymentpanding.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Toast.makeText(context, " payment panding", Toast.LENGTH_SHORT).show();
+                holder.complete.setClickable(false);
+                holder.paymentpanding.setVisibility( View.GONE );
+                holder.paymentdone.setClickable(false);
+                holder.paymentpanding.setClickable(false);
             }
         } );
     }
 
    /* private void send_data_volley() {
+
+
+
     }*/
 
 
