@@ -22,7 +22,7 @@ public class Pending_Payments extends AppCompatActivity {
         message[1] = "user2";
         message[2] = "user3";
         message[3] = "user4";
-        pending_recycle.setAdapter(new OrderAdapter(this, message, no));
+        pending_recycle.setAdapter(new Panding_pament_adapter(this, message, no));
 
 
 
